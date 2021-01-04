@@ -41,12 +41,12 @@ const API = () => {
 
   const elmentsList = serverData.map((result, index) => {
     return (
-      <div key={result.name + index}>
-        <p>{result.name}</p>
-        <span>❤️</span>
-        <p>Eye color: <span>{result.eye_color}</span></p>
-        <p>Birth year: <span>{result.birth_year}</span></p>
-      </div >
+      <fieldset id="war-box" key={result.name + index}>
+        <legend>{result.name}</legend>
+        <span id="favo">❤️</span>
+        <h4>Eye color: <span>{result.eye_color}</span></h4>
+        <h4>Birth year: <span>{result.birth_year}</span></h4>
+      </fieldset >
     )
   })
 
