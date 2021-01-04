@@ -67,6 +67,16 @@ const API = () => {
     setFav(fav.filter(fav => fav.name !== item.name))
   };
 
+  /*
+  function favInit() {
+    let obj = {
+        name: name,
+        birth_year: birth_year,
+        eye_color: eye_color
+    }
+    addToFavorite(obj)
+  }
+  */
 
   const favs = fav.map((item) => {
     return (
@@ -78,6 +88,7 @@ const API = () => {
       </fieldset >
     )
   })
+  
 
   function handleToggle(){
     const el = document.getElementById("add-section");
@@ -89,19 +100,40 @@ const API = () => {
     <div className="container">
       <section className="search-box">
         <div id="logo">
-          Star Wars
+          <img id="add-icon" src="/logo.png" ></img>
         </div>
         <div id="sub">
           <input id="txt" value={inputString} onChange={event => setInputString(event.target.value.toLowerCase())} type="text" placeholder="Enter valid search text" />
           <button id="btn" onClick={getWars}>Search</button>
         </div>
         <span onClick={handleToggle}>
-          +
+          <img id="add-icon" src="/add.png" ></img>
         </span>
       </section>
 
       <div id="add-section">
-        hello
+        <h3>Add your favorite starwar</h3>
+        <table>
+          <tr>
+            <td>Nmae: </td>
+            <td><input type="text"></input></td>
+          </tr>
+          <tr>
+            <td>Birth year: </td>
+            <td><input type="text"></input></td>
+          </tr>
+          <tr>
+            <td>Eye Color: </td>
+            <td><input type="text"></input></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>
+              <button>Add</button>
+            </td>
+          </tr>
+        </table>
+
       </div>
 
       <div className="list-container">
