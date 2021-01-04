@@ -59,7 +59,15 @@
 #war-box{
   position: relative;
   border-radius: 17px 0 17px 0;
-  width: 400px;
+  width: 350px;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+#fav-war-box{
+  position: relative;
+  border-radius: 0 17px 0 17px;
+  width: 350px;
   margin-bottom: 30px;
   text-align: left;
 }
