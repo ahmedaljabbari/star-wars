@@ -1,5 +1,57 @@
 .App {
   text-align: center;
-  background-color: #002424;
   color: aliceblue;
+}
+
+.container{
+  padding: 20px;
+}
+
+.search-box{
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+  background-color: #202020;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+#sub{
+  height: 30px;
+}
+
+#txt{
+  width: 300px;
+  height: 100%;
+  border-radius: 5px;
+  margin-right: 10px;
+  border: none;
+}
+
+
+
+#btn{
+  width: 80px;
+  height: 100%;
+  display: inline;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: darkslategrey;
+  color: white;
+  border: none;
+  font-weight: bold;
+}
+
+#logo{
+  font-weight: bold;
+}
+
+.list-container{
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  box-sizing: border-box;
 }
