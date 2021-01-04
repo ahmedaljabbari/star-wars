@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import $ from "jquery";
+import { findDOMNode } from "react-dom";
 import "../App.css";
 
 
