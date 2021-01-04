@@ -3,7 +3,6 @@ import $ from "jquery";
 import { findDOMNode } from "react-dom";
 import "../App.css";
 
-
 const API = () => {
   const [serverData, setServerData] = useState([]);
   const [inputString, setInputString] = useState("");
@@ -80,6 +79,11 @@ const API = () => {
     )
   })
 
+  function handleToggle(){
+    const el = document.getElementById("add-section");
+    $(el).slideToggle();
+  };
+
 
   return (
     <div className="container">
@@ -91,10 +95,14 @@ const API = () => {
           <input id="txt" value={inputString} onChange={event => setInputString(event.target.value.toLowerCase())} type="text" placeholder="Enter valid search text" />
           <button id="btn" onClick={getWars}>Search</button>
         </div>
-        <span id="add-section">
+        <span onClick={handleToggle}>
           +
         </span>
       </section>
+
+      <div id="add-section">
+        hello
+      </div>
 
       <div className="list-container">
         <div>
