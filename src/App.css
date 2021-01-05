@@ -3,11 +3,11 @@
   color: aliceblue;
 }
 
-.container{
+.container {
   padding: 20px;
 }
 
-.search-box{
+.search-box {
   display: flex;
   justify-content: space-between;
   width: 90%;
@@ -17,11 +17,11 @@
   box-sizing: border-box;
 }
 
-#sub{
+#sub {
   height: 30px;
 }
 
-#txt{
+#txt {
   width: 300px;
   height: 100%;
   border-radius: 5px;
@@ -29,7 +29,7 @@
   border: none;
 }
 
-#btn{
+#btn {
   width: 80px;
   height: 100%;
   display: inline;
@@ -41,12 +41,12 @@
   font-weight: bold;
 }
 
-#logo{
+#logo {
   font-weight: bold;
   height: 50px;
 }
 
-#add-section{
+#add-section {
   width: 90%;
   margin: 0 auto;
   background-color: #202020;
@@ -55,23 +55,24 @@
   display: none;
 }
 
-#add-section > table{
+#add-section > table {
   text-align: left;
   margin: 0 auto;
   padding: 10px;
 }
 
-
-.list-container{
+.list-container {
   width: 90%;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
   padding: 20px;
   box-sizing: border-box;
+  text-align: center;
+  justify-items: center;
 }
 
-#war-box{
+#war-box {
   position: relative;
   border-radius: 17px 0 17px 0;
   width: 350px;
@@ -79,7 +80,7 @@
   text-align: left;
 }
 
-#fav-war-box{
+#fav-war-box {
   position: relative;
   border-radius: 0 17px 0 17px;
   width: 350px;
@@ -87,34 +88,34 @@
   text-align: left;
 }
 
-#favo{
+#favo {
   position: absolute;
   top: 12px;
   right: 10px;
   cursor: pointer;
 }
 
-#favo:hover{
+#favo:hover {
   transform: scale(1.5);
 }
 
-#add-icon{
+#add-icon {
   height: 35px;
   width: 100px;
   cursor: pointer;
 }
 
-#submit-btn{
+#submit-btn {
   width: 70px;
   font-weight: bold;
 }
 
-#fav-reverse{
+#fav-reverse {
   display: flex;
   flex-direction: column-reverse;
 }
 
-legend{
+legend {
   color: cadetblue;
   font-weight: bold;
 }
