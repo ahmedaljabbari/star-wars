@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import $ from "jquery";
+import AddIcon from "../imgs/add.png"
+import LogoIcon from "../imgs/logo.png"
 import "../App.css";
 
 const API = () => {
@@ -111,7 +113,7 @@ const API = () => {
     <div className="container">
       <section className="search-box">
         <div id="logo">
-          <img id="add-icon" src="/logo.png" alt=""></img>
+          <img id="add-icon" src={LogoIcon} alt=""></img>
         </div>
         <div id="sub">
           <abbr title="type minimum 3 charachters">
@@ -130,7 +132,7 @@ const API = () => {
           </button>
         </div>
         <span onClick={handleToggle}>
-          <abbr title="Click to add your favorite"><img alt="" id="add-icon" src="/add.png"></img></abbr>
+          <abbr title="Click to add your favorite"><img alt="" id="add-icon" src={AddIcon}></img></abbr>
         </span>
       </section>
 
