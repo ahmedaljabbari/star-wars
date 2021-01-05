@@ -88,6 +88,13 @@
   text-align: left;
 }
 
+#war-box:hover, #fav-war-box:hover{
+  background-color: #202020;
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: 0.4s;
+}
+
 #favo {
   position: absolute;
   top: 12px;
@@ -105,6 +112,11 @@
   cursor: pointer;
 }
 
+#add-icon:hover {
+  transform: scale(1.04);
+  transition: 0.04s;
+}
+
 #submit-btn {
   width: 70px;
   font-weight: bold;
@@ -118,4 +130,8 @@
 legend {
   color: cadetblue;
   font-weight: bold;
+}
+
+.topic{
+  font-family: 'Courgette', cursive;
 }

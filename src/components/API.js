@@ -130,14 +130,14 @@ const API = () => {
           </button>
         </div>
         <span onClick={handleToggle}>
-          <img alt="" id="add-icon" src="/add.png"></img>
+          <abbr title="Click to add your favorite"><img alt="" id="add-icon" src="/add.png"></img></abbr>
         </span>
       </section>
 
       <div id="add-section">
         <table width="300">
           <caption>
-            <h3>Add your favorite starwar</h3>
+            <h3 className="topic">Add your favorite starwar</h3>
           </caption>
           <tr>
             <td>Name: </td>
@@ -186,11 +186,11 @@ const API = () => {
 
       <div className="list-container">
         <div>
-          <h3>Main list</h3>
+          <h2 className="topic">Main list</h2>
           {elmentsList}
         </div>
         <div>
-          <h3>Favorites list</h3>
+          <h2 className="topic">Favorites list</h2>
           <div id="fav-reverse">{favs}</div>
         </div>
       </div>
