@@ -12,6 +12,10 @@ const API = () => {
   let favElements = [];
   const [fav, setFav] = useState(favElements)
 
+  const [name, setName] = useState("")
+  const [birth_year, setBirthYear] = useState("")
+  const [eye_color, setEyeColor] = useState("")
+
 
   async function getWars() {
     let url = `https://swapi.dev/api/people/?page=1`;
@@ -28,7 +32,7 @@ const API = () => {
         })
       }
     }
-    filterElements();
+    filterElements();    
   };
 
 
@@ -55,7 +59,7 @@ const API = () => {
   const elmentsList = serverData.map((result, index) => {
     return (
       <fieldset id="war-box" key={result.name + index}>
-        <legend>{result.name}</legend>
+        <legend >{result.name}</legend>
         <span id="favo" onClick={() => addToFavorite(result)}>❤️</span>
         <h4>Eye color: <span>{result.eye_color}</span></h4>
         <h4>Birth year: <span>{result.birth_year}</span></h4>
@@ -67,16 +71,16 @@ const API = () => {
     setFav(fav.filter(fav => fav.name !== item.name))
   };
 
-  /*
   function favInit() {
     let obj = {
         name: name,
         birth_year: birth_year,
         eye_color: eye_color
     }
-    addToFavorite(obj)
+    addToFavorite(obj);
+    const el = document.getElementById("add-section");
+    $(el).slideToggle()
   }
-  */
 
   const favs = fav.map((item) => {
     return (
@@ -112,24 +116,25 @@ const API = () => {
       </section>
 
       <div id="add-section">
-        <h3>Add your favorite starwar</h3>
-        <table>
+        
+        <table width="300">
+          <caption><h3>Add your favorite starwar</h3></caption>
           <tr>
-            <td>Nmae: </td>
-            <td><input type="text"></input></td>
+            <td>Name: </td>
+            <td><input type="text" required onChange={event => setName(event.target.value)}></input></td>
           </tr>
           <tr>
             <td>Birth year: </td>
-            <td><input type="text"></input></td>
+            <td><input type="text" required onChange={event => setBirthYear(event.target.value)}></input></td>
           </tr>
           <tr>
             <td>Eye Color: </td>
-            <td><input type="text"></input></td>
+            <td><input type="text" required onChange={event => setEyeColor(event.target.value)}></input></td>
           </tr>
           <tr>
             <td></td>
             <td>
-              <button>Add</button>
+              <button id="submit-btn" onClick={favInit} disabled={name === "" || eye_color === "" || birth_year === ""}>Add</button>
             </td>
           </tr>
         </table>
@@ -143,7 +148,7 @@ const API = () => {
         </div>
         <div>
           <h3>Favorites list</h3>
-          {favs}
+          <div id="fav-reverse">{favs}</div>
         </div>
       </div>
     </div>
